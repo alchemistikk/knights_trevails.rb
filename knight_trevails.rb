@@ -18,7 +18,7 @@ class Board
 end
 
 class Knight
-  attr_accessor :position
+  attr_accessor :position, :board
 
   def initialize
     @position = [nil, nil]
