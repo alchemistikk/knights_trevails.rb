@@ -1,8 +1,7 @@
 # Todo:
-# Create a knight
-# Define where on the board the knight may move
-# Given the knight's location and a target location, return the fewest number of
-# moves it takes to get from the knight's location to the target location
+# Define where on the board the knight may move. Treat all possible moves the knight could make as children in a tree
+# Given the knight's position and a target position, return the fewest number of
+# moves it takes to get from the knight's position to the target position
 
 # Example returns:
 
@@ -18,4 +17,13 @@ class Board
   end
 end
 
+class Knight
+  attr_accessor :position
+
+  def initialize
+    @position = [nil, nil]
+  end
+end
+
 board = Board.new
+knight = Knight.new
