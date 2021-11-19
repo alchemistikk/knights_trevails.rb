@@ -22,8 +22,6 @@ class Knight
 
   def initialize
     @position = [nil, nil]
+    @board = Board.new
   end
 end
-
-board = Board.new
-knight = Knight.new
