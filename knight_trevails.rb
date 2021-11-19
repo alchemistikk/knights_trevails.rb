@@ -13,7 +13,19 @@ class Board
   attr_accessor :board
 
   def initialize
-    @board = Array.new(8) { Array.new(8) { |i| i } }
+    @base = Array.new(64, Array.new(2))
+    @board = populate(@base)
+  end
+
+  def populate(board)
+    index = 0
+    8.times do |first|
+      8.times do |second|
+        board[index] = [first, second]
+        index += 1
+      end
+    end
+    board
   end
 end
 
@@ -22,6 +34,6 @@ class Knight
 
   def initialize
     @position = [nil, nil]
-    @board = Board.new
+    @board = Board.new.board
   end
 end
