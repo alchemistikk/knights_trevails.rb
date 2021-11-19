@@ -36,4 +36,14 @@ class Knight
     @position = [nil, nil]
     @board = Board.new.board
   end
+
+  def possible_moves(pos)
+    vertices = [-17, -15, -10, -6, 6, 10, 15, 17] # All possible moves
+    possible_vertices = []
+    pos_index = @board.index(pos)
+    vertices.each { |vertex| possible_vertices << pos_index + vertex }
+    possible_positions = []
+    possible_vertices.each { |vertex| possible_positions << @board[vertex] }
+    possible_positions
+  end
 end
